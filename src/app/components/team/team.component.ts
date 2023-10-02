@@ -1,6 +1,5 @@
 import { UserService } from '../../services/user/user.service';
 import { Component, OnInit, Input } from '@angular/core';
-import { lastValueFrom } from 'rxjs';
 import { BoardService } from 'src/app/services/board/board.service';
 
 @Component({
@@ -53,6 +52,5 @@ export class TeamComponent implements OnInit {
   }
 
   add(){
-
   }
 }
