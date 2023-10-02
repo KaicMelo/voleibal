@@ -1,0 +1,11 @@
+<div
+  class="c-container"
+  *ngFor="let t of team; index as i"
+  [ngClass]="{ blue: i % 2 == 0 }"
+>
+  <span class="c-container__action" (click)="sum()">+</span>
+  {{ t.name }}
+  <span class="c-container__action" (click)="sub()">-</span>
+</div>
+
+<div class="add" (click)="add()"> +</div>

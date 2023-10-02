@@ -1,0 +1,17 @@
+.score-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.team-score {
+  margin: 0 20px;
+  font-size: 95px;
+}
+
+.players {
+  display: flex;
+  justify-content: space-evenly;
+}

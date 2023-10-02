@@ -1,0 +1,31 @@
+body,
+html {
+  background-color: black;
+}
+.c-container {
+  display: grid;
+  grid-column: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  grid-template-areas: "team_1 board team_2";
+
+  &__team_1 {
+    grid-area: team_1;
+    border-radius: 10px;
+  }
+  &__board {
+    grid-area: board;
+    background-color: #00000026;
+    border-radius: 10px;
+  }
+  &__team_2 {
+    grid-area: team_2;
+    border-radius: 10px;
+  }
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
