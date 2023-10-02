@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BoardService } from 'src/app/services/board/board.service';
-import { UserService } from 'src/app/services/user/user.service';
+import { TeamService } from 'src/app/services/team/team.service';
 
 @Component({
   selector: 'app-board',
@@ -9,19 +9,21 @@ import { UserService } from 'src/app/services/user/user.service';
 })
 export class BoardComponent implements OnInit {
   board: any;
-  time: any;
+  time_1: any;
+  time_2: any;
 
   constructor(
     private boardService: BoardService,
-    private userService: UserService
+    private teamService: TeamService
   ) {}
 
   ngOnInit(): void {
     this.boardService.get().subscribe((valor) => {
       this.board = valor;
     });
-    this.userService.get().subscribe((valor) => {
-      this.time = valor.length;
+    this.teamService.get().subscribe((valor) => {
+      this.time_1 = valor.team_1.length;
+      this.time_2 = valor.team_2.length;
     });
   }
 }

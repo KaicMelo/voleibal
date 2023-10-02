@@ -9,3 +9,11 @@
 </div>
 
 <div class="add" (click)="add()">+</div>
+
+<app-modal
+  *ngIf="onAdd"
+  [teamNumber]="teamNumber"
+  [title]="titleModal"
+  [content]="contentModal"
+  (onClose)="onClose()"
+></app-modal>

@@ -1,0 +1,11 @@
+<po-modal #modal [p-title]="title" [p-hide-close]="true">
+  <div *ngFor="let c of content">
+    <span class="po-icon po-icon-plus-circle" (click)="add(c)"></span> {{ c.name }}
+    <span class="po-icon po-icon-minus-circle" (click)="remove(c)"></span>
+  </div>
+
+  <po-modal-footer [p-disabled-align]="false">
+    <po-button p-kind="primary" p-label="Confirmar" (p-click)="onConfirm()">
+    </po-button>
+  </po-modal-footer>
+</po-modal>

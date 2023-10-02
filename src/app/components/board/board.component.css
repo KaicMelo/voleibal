@@ -4,6 +4,7 @@
   justify-content: center;
   font-size: 36px;
   font-weight: bold;
+  margin-top: 40px;
 }
 
 .team-score {
@@ -14,4 +15,5 @@
 .players {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 50px;
 }

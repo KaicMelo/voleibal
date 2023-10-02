@@ -1,6 +1,7 @@
 import { UserService } from '../../services/user/user.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { BoardService } from 'src/app/services/board/board.service';
+import { TeamService } from 'src/app/services/team/team.service';
 
 @Component({
   selector: 'app-team',
@@ -8,8 +9,13 @@ import { BoardService } from 'src/app/services/board/board.service';
   styleUrls: ['./team.component.less'],
 })
 export class TeamComponent implements OnInit {
-  team: any;
+  @Input() team: any;
+
   board: any;
+  onAdd = false;
+  titleModal = 'Selecione os jogadores';
+  contentModal: any;
+
   @Input() teamNumber: any;
   constructor(
     private userService: UserService,
@@ -18,7 +24,7 @@ export class TeamComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.userService.get().subscribe((valor) => {
-      this.team = valor;
+      this.contentModal = valor;
     });
     this.boardService.get().subscribe((valor) => {
       this.board = valor;
@@ -52,5 +58,10 @@ export class TeamComponent implements OnInit {
   }
 
   add(){
+    this.onAdd = true
+  }
+
+  onClose() {
+    this.onAdd = false;
   }
 }
