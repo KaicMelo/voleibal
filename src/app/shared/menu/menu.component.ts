@@ -18,4 +18,8 @@ export class MenuComponent {
   board(){
     this.router.navigate(['']);
   }
+
+  settings(){
+    this.router.navigate(['settings']);
+  }
 }
