@@ -1,16 +1,19 @@
 <div class="c-container">
-  <po-input p-placeholder="Pesquise"></po-input>
+  <!-- <po-input p-placeholder="Pesquise"></po-input> -->
+  <div></div>
   <po-button p-label="Novo" (p-click)="create()"> </po-button>
 </div>
-<po-table
-  [p-hide-columns-manager]="true"
-  [p-items]="table"
-  [p-hide-table-search]="true"
-  [p-actions]="actions"
-  [p-actions-right]="true"
-  [p-columns]="columns"
+<app-table-pagination
+  [items]="table"
+  [actions]="actions"
+  [columns]="columns"
+  [pageSize]="pageSize"
+  [totalHits]="40"
+  [currentPage]="currentPage"
+  (onChangeCurrentPage)="onChangeCurrentPage($event)"
+  (onChangePageSize)="onChangePageSize($event)"
 >
-</po-table>
+</app-table-pagination>
 
 <po-page-slide #pageSlide p-title="Cadastre o jogador">
   <form
@@ -18,7 +21,11 @@
     [formGroup]="playersForm"
     (ngSubmit)="onSave(playersForm.value)"
   >
-    <po-input p-label="Nome" p-placeholder="Digite"  formControlName="name"></po-input>
+    <po-input
+      p-label="Nome"
+      p-placeholder="Digite"
+      formControlName="name"
+    ></po-input>
     <po-select
       p-label="Gênero"
       p-placeholder="Selecione"
@@ -29,7 +36,12 @@
       ]"
     ></po-select>
 
-    <po-button [p-disabled]="!playersForm.valid" class="save-button" p-label="Salvar" (p-click)="packageNgForm.ngSubmit.emit()">
+    <po-button
+      [p-disabled]="!playersForm.valid"
+      class="save-button"
+      p-label="Salvar"
+      (p-click)="packageNgForm.ngSubmit.emit()"
+    >
     </po-button>
   </form>
 </po-page-slide>

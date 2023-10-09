@@ -40,5 +40,9 @@ export class UserService {
     return this.http.post(API, value);
   }
 
+  getPagination(pageSize: number,currentPage: number): Observable<any> {
+    return this.http.get(`${API}?_page=${currentPage}&_limit=${pageSize}`);
+  }
+
   delete() {}
 }

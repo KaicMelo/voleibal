@@ -1,0 +1,28 @@
+<po-table
+  [p-selectable]="selectable"
+  [p-columns]="columns"
+  [p-loading]="loadingTable"
+  [p-items]="items"
+  [p-actions]="actions"
+  [p-actions-right]="true"
+  [p-striped]="true"
+  [p-sort]="true"
+  [p-hide-text-overflow]="true"
+  [p-hide-columns-manager]="true"
+  (p-change-visible-columns)="changeColumnVisible($event)"
+  data-cy="cy_assumptions-table-view"
+>
+</po-table>
+<!-- <div *ngIf="!isCustomPaginator">
+  <app-paginator
+    [totalHits]="totalHits"
+    [countHits]="totalHits"
+    [currentPage]="currentPage"
+    [pageSize]="pageSize"
+    [panelContainer]="true"
+    [pageSizeOptions]="pageSizeOptions"
+    (onPageChange)="onPageChange($event)"
+    (onPageSizeChange)="onPageSizeChange($event)"
+    data-cy="cy_assumptions-table-paginator"
+  ></app-paginator>
+</div> -->

@@ -1,5 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import {
   PoNotification,
   PoNotificationService,
@@ -21,17 +26,21 @@ export class PlayersComponent implements OnInit {
   columns!: Array<PoTableColumn>;
   @ViewChild('pageSlide')
   private readonly poPageSlide!: PoPageSlideComponent;
-  playersForm!:FormGroup;
+  playersForm!: FormGroup;
+  pageSize = 20;
+  currentPage = 1;
 
-  constructor(private userService: UserService, private formBuild:FormBuilder,private poNotificationService: PoNotificationService) {}
+  constructor(
+    private userService: UserService,
+    private formBuild: FormBuilder,
+    private poNotificationService: PoNotificationService
+  ) {}
 
   async ngOnInit(): Promise<void> {
     this.initForm();
     await this.getActions();
     await this.getColumns();
-    this.userService.get().subscribe((valor) => {
-      this.table = valor;
-    });
+    await this.getTable();
   }
 
   async getActions() {
@@ -61,8 +70,8 @@ export class PlayersComponent implements OnInit {
     this.poPageSlide.open();
   }
 
-  onSave(event: any){
-    this.userService.create(event).subscribe(response => {
+  onSave(event: any) {
+    this.userService.create(event).subscribe((response) => {
       this.userService.update(response);
       this.poPageSlide.close();
 
@@ -71,12 +80,34 @@ export class PlayersComponent implements OnInit {
         orientation: PoToasterOrientation.Top,
       };
       this.poNotificationService.success(poNotification);
-    })
+    });
   }
+
   initForm(): void {
     this.playersForm = this.formBuild.group({
       name: new FormControl(null, Validators.required),
       generous: new FormControl(null, Validators.required),
     });
+  }
+
+  async onChangeCurrentPage({ currentPage }: any): Promise<void> {
+    this.currentPage = currentPage;
+    await this.getTable();
+  }
+
+  async onChangePageSize({ pageSize, currentPage }: any): Promise<void> {
+    this.currentPage = currentPage;
+    this.pageSize = pageSize;
+
+    await this.getTable();
+  }
+
+  async getTable() {
+    this.userService.get().subscribe((valor) => {
+      this.table = valor;
+    });
+    // this.userService.getPagination(this.pageSize, this.currentPage).subscribe((valor) => {
+    //   this.table = valor;
+    // });
   }
 }

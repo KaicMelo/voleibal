@@ -1,0 +1,60 @@
+<div
+  class="paginator-container"
+  [ngClass]="{ 'panel-container': panelContainer }"
+>
+  <form name="form" class="pull-left">
+    <span
+      style="cursor: pointer; color: var(--colorPrimay)"
+      class="po-icon po-icon-first-page"
+      (click)="goToFirstPage()"
+    ></span>
+    <span
+      style="cursor: pointer; color: var(--colorPrimay)"
+      class="po-icon po-icon-arrow-left"
+      (click)="goToPreviousPage()"
+      *ngIf="currentPage > 1"
+    ></span>
+    <span
+      style="cursor: pointer; color: var(--colorPrimay)"
+      class="po-icon po-icon-arrow-left"
+      *ngIf="currentPage === 1"
+    ></span>
+
+    <po-number
+      name="currentPage"
+      (keypress)="eventHandler($event)"
+      [(ngModel)]="currentPage"
+      (p-change)="setPage($event)"
+      [p-max]="lastPage"
+      class="input-paginator"
+      style="display: inline-block"
+    ></po-number>
+    de
+    {{ lastPage }}
+    <span
+      style="cursor: pointer; color: var(--colorPrimay)"
+      class="po-icon po-icon-arrow-right"
+      (click)="goToNextPage()"
+      *ngIf="currentPage < lastPage"
+    ></span>
+    <span
+      style="cursor: pointer; color: var(--colorPrimay)"
+      class="po-icon po-icon-arrow-right"
+      *ngIf="currentPage >= lastPage"
+    ></span>
+    <span
+      style="cursor: pointer; color: var(--colorPrimay)"
+      class="po-icon po-icon-last-page"
+      (click)="goToLastPage()"
+    ></span>
+  </form>
+  <div class="pull-right info-paginator">
+    <p>Itens por pág</p>
+    <po-select
+      (p-change)="pageSizeChanged($event)"
+      *ngIf="pageSizeOptions"
+      [p-options]="pageSizeOptions"
+      [ngModel]="pageSize"
+    ></po-select>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+:host::ng-deep {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .info-paginator {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 0;
+
+    p {
+      margin: 0 auto;
+      font-size: 14px;
+      color: var(--colorTitle);
+      font-weight: 400;
+    }
+
+    po-select {
+      width: 70px;
+    }
+
+    .po-select {
+      min-width: 80px;
+      border: 1px solid #b6bdbf;
+      box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.0995245);
+      border-radius: 3px;
+      height: 32px;
+    }
+  }
+  .po-field-container-content {
+    width: 40px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+
+    input {
+      min-height: 32px;
+      text-align: center;
+      border: 1px solid #b6bdbf;
+    }
+  }
+}
+
+span {
+  cursor: pointer;
+  font-size: 26px;
+  position: relative;
+  top: 6px;
+  color: var(--secondary);
+}
+
+.paginator-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.panel-container {
+    border: 1px solid var(--light-background-border);
+    background: var(--colorWhite);
+    padding: 0px 12px;
+  }
+}

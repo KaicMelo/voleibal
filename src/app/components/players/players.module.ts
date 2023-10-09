@@ -4,6 +4,7 @@ import { PlayersComponent } from './players.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PoButtonModule, PoFieldModule, PoPageModule, PoTableModule } from '@po-ui/ng-components';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TablePaginationModule } from 'src/app/shared/table-pagination/table-pagination.module';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
     PoButtonModule,
     PoFieldModule,
     PoPageModule,
+    TablePaginationModule,
     ReactiveFormsModule
   ],
 })
