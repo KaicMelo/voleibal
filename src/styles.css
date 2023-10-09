@@ -9,3 +9,7 @@
   font-family: 'YoungSerif-Regular';
   font-size: 15px;
 }
+
+:ng-deep{
+  --black-ligth:#00000026;
+}

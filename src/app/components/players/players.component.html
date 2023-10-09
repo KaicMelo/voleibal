@@ -1,0 +1,35 @@
+<div class="c-container">
+  <po-input p-placeholder="Pesquise"></po-input>
+  <po-button p-label="Novo" (p-click)="create()"> </po-button>
+</div>
+<po-table
+  [p-hide-columns-manager]="true"
+  [p-items]="table"
+  [p-hide-table-search]="true"
+  [p-actions]="actions"
+  [p-actions-right]="true"
+  [p-columns]="columns"
+>
+</po-table>
+
+<po-page-slide #pageSlide p-title="Cadastre o jogador">
+  <form
+    #packageNgForm="ngForm"
+    [formGroup]="playersForm"
+    (ngSubmit)="onSave(playersForm.value)"
+  >
+    <po-input p-label="Nome" p-placeholder="Digite"  formControlName="name"></po-input>
+    <po-select
+      p-label="Gênero"
+      p-placeholder="Selecione"
+      formControlName="generous"
+      [p-options]="[
+        { label: 'Masculino', value: 'masculine' },
+        { label: 'Feminino', value: 'feminine' }
+      ]"
+    ></po-select>
+
+    <po-button [p-disabled]="!playersForm.valid" class="save-button" p-label="Salvar" (p-click)="packageNgForm.ngSubmit.emit()">
+    </po-button>
+  </form>
+</po-page-slide>
