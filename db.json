@@ -3,107 +3,134 @@
     {
       "id": 1,
       "name": "Kaic",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 4
     },
     {
       "id": 2,
       "name": "Bruno Nicolete",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 4
     },
     {
       "id": 3,
       "name": "Hugo",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 5
     },
     {
       "id": 4,
       "name": "Bruno",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 5
     },
     {
       "id": 5,
       "name": "Kely",
-      "generous": "feminine"
+      "generous": "feminine",
+      "level": 4
     },
     {
       "id": 6,
       "name": "Pietro",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 5
     },
     {
       "id": 7,
       "name": "Amanda",
-      "generous": "feminine"
+      "generous": "feminine",
+      "level": 2
     },
     {
       "id": 8,
       "name": "Luiza",
-      "generous": "feminine"
+      "generous": "feminine",
+      "level": 4
     },
     {
       "id": 9,
       "name": "Theo",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 4
     },
     {
       "id": 10,
       "name": "Tabata",
-      "generous": "feminine"
+      "generous": "feminine",
+      "level": 3
     },
     {
       "id": 11,
       "name": "Fernando",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 4
     },
     {
       "id": 12,
       "name": "Fernanda",
-      "generous": "feminine"
+      "generous": "feminine",
+      "level": 3
     },
     {
       "id": 13,
       "name": "Guilherme",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 4
     },
     {
       "id": 14,
       "name": "Tico",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 5
     },
     {
       "id": 15,
       "name": "Sandro",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 4
     },
     {
       "id": 16,
       "name": "Jaqueline",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 1
     },
     {
       "id": 17,
       "name": "Lea",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 2
     },
     {
       "id": 18,
       "name": "Camila",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 3
     },
     {
       "id": 19,
       "name": "Carol",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 3
     },
     {
       "id": 20,
       "name": "André",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 4
     },
     {
       "id": 21,
       "name": "Rafael",
-      "generous": "masculine"
+      "generous": "masculine",
+      "level": 4
+    }
+  ],
+  "settings": [
+    {
+      "qt_sets": 15,
+      "qt_players": 6
     }
   ]
 }

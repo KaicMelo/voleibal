@@ -1,1 +1,10 @@
-<p>team-configuration works!</p>
+<po-button p-label="Sortear time" (p-click)="drawTeams()"> </po-button>
+
+<div *ngFor="let t of teams; let i = index">
+  <div class="t-container">
+    <p class="t-container--title">Time {{ i+1 }}: </p>
+    <div *ngFor="let player of t.team; let y = index">
+      {{ player.name }}
+    </div>
+  </div>
+</div>
