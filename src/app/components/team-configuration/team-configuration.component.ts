@@ -22,7 +22,11 @@ export class TeamConfigurationComponent implements OnInit {
   }
 
   drawTeams() {
+    this.teams = [];
+
     const qt_teams = Math.floor(this.players.length / this.settings.qt_players);
+
+    shuffleArray(this.players);
 
     for (let index = 1; index <= qt_teams; index++) {
       this.teams.push({ team: [] });
@@ -40,9 +44,9 @@ export class TeamConfigurationComponent implements OnInit {
         }
       } else {
         console.log(this.players[i]);
+        //esta rodando
       }
     }
-    console.log(this.teams);
   }
 
   async getData() {
@@ -53,4 +57,16 @@ export class TeamConfigurationComponent implements OnInit {
       this.players = response;
     });
   }
+}
+
+function shuffleArray(arr: any) {
+  // Loop em todos os elementos
+for (let i = arr.length - 1; i > 0; i--) {
+      // Escolhendo elemento aleatório
+  const j = Math.floor(Math.random() * (i + 1));
+  // Reposicionando elemento
+  [arr[i], arr[j]] = [arr[j], arr[i]];
+}
+// Retornando array com aleatoriedade
+return arr;
 }

@@ -5,6 +5,8 @@
     <p class="t-container--title">Time {{ i+1 }}: </p>
     <div *ngFor="let player of t.team; let y = index">
       {{ player.name }}
+
+      {{player.level}}
     </div>
   </div>
 </div>
