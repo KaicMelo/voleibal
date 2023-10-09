@@ -24,6 +24,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./components/settings/settings.module').then((m) => m.SettingsModule),
   },
+  {
+    path: 'team-configuration',
+    loadChildren: () =>
+      import('./components/team-configuration/team-configuration.module').then((m) => m.TeamConfigurationModule),
+  },
 ];
 
 @NgModule({
