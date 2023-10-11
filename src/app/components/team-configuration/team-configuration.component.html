@@ -2,11 +2,11 @@
 
 <div *ngFor="let t of teams; let i = index">
   <div class="t-container">
-    <p class="t-container--title">Time {{ i+1 }}: </p>
+    <p class="t-container--title">Time {{ i + 1 }}:</p>
     <div *ngFor="let player of t.team; let y = index">
       {{ player.name }}
 
-      {{player.level}}
+      {{ player.level }}
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
-import { BehaviorSubject, Observable, lastValueFrom, of } from 'rxjs';
-import { environment } from 'src/app/environments/environment';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { environment } from 'src/environments/environment.development';
 
 const API = `${environment.API}/items`;
 
@@ -32,7 +32,7 @@ export class UserService {
     return of();
   }
 
-  update(value: any){
+  update(value: any) {
     this.userSubject.next([...this.userSubject.getValue(), value]);
   }
 
@@ -40,7 +40,7 @@ export class UserService {
     return this.http.post(API, value);
   }
 
-  getPagination(pageSize: number,currentPage: number): Observable<any> {
+  getPagination(pageSize: number, currentPage: number): Observable<any> {
     return this.http.get(`${API}?_page=${currentPage}&_limit=${pageSize}`);
   }
 

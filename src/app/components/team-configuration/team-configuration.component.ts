@@ -34,8 +34,6 @@ export class TeamConfigurationComponent implements OnInit {
 
     let count = 0;
 
-    let temp: any = [];
-
     for (let i = 1; i < this.players.length; i++) {
       if (this.teams[count]) {
         this.teams[count].team.push(this.players[i]);
@@ -60,13 +58,9 @@ export class TeamConfigurationComponent implements OnInit {
 }
 
 function shuffleArray(arr: any) {
-  // Loop em todos os elementos
-for (let i = arr.length - 1; i > 0; i--) {
-      // Escolhendo elemento aleatório
-  const j = Math.floor(Math.random() * (i + 1));
-  // Reposicionando elemento
-  [arr[i], arr[j]] = [arr[j], arr[i]];
-}
-// Retornando array com aleatoriedade
-return arr;
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }
