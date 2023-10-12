@@ -10,6 +10,7 @@ import { UserService } from 'src/app/services/user/user.service';
 export class TeamConfigurationComponent implements OnInit {
   players: any[] = [];
   teams: any = [];
+  running: any = [];
   settings: any;
 
   constructor(
@@ -23,6 +24,7 @@ export class TeamConfigurationComponent implements OnInit {
 
   drawTeams() {
     this.teams = [];
+    this.running = [];
 
     const qt_teams = Math.floor(this.players.length / this.settings.qt_players);
 
@@ -41,8 +43,7 @@ export class TeamConfigurationComponent implements OnInit {
           count++;
         }
       } else {
-        console.log(this.players[i]);
-        //esta rodando
+        this.running.push(this.players[i]);
       }
     }
   }

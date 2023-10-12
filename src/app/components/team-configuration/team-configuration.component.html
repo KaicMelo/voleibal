@@ -10,3 +10,24 @@
     </div>
   </div>
 </div>
+
+<div *ngIf="running.length">
+  <div class="t-container__running">
+    <p class="t-container__running--title">Rodando</p>
+    <div *ngFor="let run of running; let y = index">
+      {{ run.name }}
+
+      {{ run.level }}
+    </div>
+  </div>
+</div>
+<!-- <div *ngFor="let t of running; let i = index">
+  <div class="t-container--running">
+    <p class="t-container--title">Rodando</p>
+    <div *ngFor="let run of running; let y = index">
+      {{ run.name }}
+
+      {{ run.level }}
+    </div>
+  </div>
+</div> -->
