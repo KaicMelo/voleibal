@@ -14,4 +14,8 @@ export class SettingsService {
   get(): Observable<any> {
     return this.http.get(API);
   }
+
+  put(id: number, payload: any): Observable<any> {
+    return this.http.put(`${API}/${id}`,payload);
+  }
 }

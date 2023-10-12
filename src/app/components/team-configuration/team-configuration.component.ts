@@ -37,7 +37,7 @@ export class TeamConfigurationComponent implements OnInit {
     for (let i = 1; i < this.players.length; i++) {
       if (this.teams[count]) {
         this.teams[count].team.push(this.players[i]);
-        if (this.teams[count].team.length == 6) {
+        if (this.teams[count].team.length == this.settings.qt_players) {
           count++;
         }
       } else {
@@ -49,7 +49,7 @@ export class TeamConfigurationComponent implements OnInit {
 
   async getData() {
     this.settingsService.get().subscribe((response) => {
-      this.settings = response[0];
+      this.settings = response.shift();
     });
     this.userService.get().subscribe((response) => {
       this.players = response;
