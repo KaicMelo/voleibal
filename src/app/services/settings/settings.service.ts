@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/app/environments/environment';
+import { environment } from 'src/environments/environment.development';
 
 const API = `${environment.API}/settings`;
 
@@ -13,5 +13,9 @@ export class SettingsService {
 
   get(): Observable<any> {
     return this.http.get(API);
+  }
+
+  put(id: number, payload: any): Observable<any> {
+    return this.http.put(`${API}/${id}`,payload);
   }
 }

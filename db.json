@@ -130,7 +130,8 @@
   "settings": [
     {
       "qt_sets": 15,
-      "qt_players": 6
+      "qt_players": 6,
+      "id": 1
     }
   ]
 }

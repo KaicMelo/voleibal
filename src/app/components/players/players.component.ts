@@ -18,7 +18,7 @@ import { UserService } from 'src/app/services/user/user.service';
 @Component({
   selector: 'app-players',
   templateUrl: './players.component.html',
-  styleUrls: ['./players.component.css'],
+  styleUrls: ['./players.component.less'],
 })
 export class PlayersComponent implements OnInit {
   table: any;

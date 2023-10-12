@@ -2,11 +2,30 @@
 
 <div *ngFor="let t of teams; let i = index">
   <div class="t-container">
-    <p class="t-container--title">Time {{ i+1 }}: </p>
+    <p class="t-container--title">Time {{ i + 1 }}:</p>
     <div *ngFor="let player of t.team; let y = index">
       {{ player.name }}
 
-      {{player.level}}
+      {{ player.level }}
+
+      <i class="po-icon po-icon-first-page change-player-modal" (click)="changePlayerModal(player)"></i>
     </div>
   </div>
 </div>
+
+<div *ngIf="running.length">
+  <div class="t-container__running">
+    <p class="t-container__running--title">Rodando</p>
+    <div *ngFor="let run of running; let y = index">
+      {{ run.name }}
+
+      {{ run.level }}
+    </div>
+  </div>
+</div>
+
+<po-modal #modal [p-title]="titleToChange">
+  <div *ngFor="let p of players" class="player-changed">
+    <p (click)="playerSelectedToChange(p)">{{p.name}}</p>
+  </div>
+</po-modal>
