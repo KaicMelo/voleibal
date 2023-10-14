@@ -4,127 +4,148 @@
       "id": 1,
       "name": "Kaic",
       "generous": "masculine",
-      "level": 4
+      "level": 4,
+      "$selected": true
     },
     {
       "id": 2,
       "name": "Bruno Nicolete",
       "generous": "masculine",
-      "level": 4
+      "level": 4,
+      "$selected": true
     },
     {
       "id": 3,
       "name": "Hugo",
       "generous": "masculine",
-      "level": 5
+      "level": 5,
+      "$selected": true
     },
     {
       "id": 4,
       "name": "Bruno",
       "generous": "masculine",
-      "level": 5
+      "level": 5,
+      "$selected": true
     },
     {
       "id": 5,
       "name": "Kely",
       "generous": "feminine",
-      "level": 4
+      "level": 4,
+      "$selected": true
     },
     {
       "id": 6,
       "name": "Pietro",
       "generous": "masculine",
-      "level": 5
+      "level": 5,
+      "$selected": true
     },
     {
       "id": 7,
       "name": "Amanda",
       "generous": "feminine",
-      "level": 2
+      "level": 2,
+      "$selected": true
     },
     {
       "id": 8,
       "name": "Luiza",
       "generous": "feminine",
-      "level": 4
+      "level": 4,
+      "$selected": true
     },
     {
       "id": 9,
       "name": "Theo",
       "generous": "masculine",
-      "level": 4
+      "level": 4,
+      "$selected": true
     },
     {
       "id": 10,
       "name": "Tabata",
       "generous": "feminine",
-      "level": 3
+      "level": 3,
+      "$selected": true
     },
     {
       "id": 11,
       "name": "Fernando",
       "generous": "masculine",
-      "level": 4
+      "level": 4,
+      "$selected": true
     },
     {
       "id": 12,
       "name": "Fernanda",
       "generous": "feminine",
-      "level": 3
+      "level": 3,
+      "$selected": true
     },
     {
       "id": 13,
       "name": "Guilherme",
       "generous": "masculine",
-      "level": 4
+      "level": 4,
+      "$selected": true
     },
     {
       "id": 14,
       "name": "Tico",
       "generous": "masculine",
-      "level": 5
+      "level": 5,
+      "$selected": true
     },
     {
       "id": 15,
       "name": "Sandro",
       "generous": "masculine",
-      "level": 4
+      "level": 4,
+      "$selected": true
     },
     {
       "id": 16,
       "name": "Jaqueline",
       "generous": "masculine",
-      "level": 1
+      "level": 1,
+      "$selected": true
     },
     {
       "id": 17,
       "name": "Lea",
       "generous": "masculine",
-      "level": 2
+      "level": 2,
+      "$selected": true
     },
     {
       "id": 18,
       "name": "Camila",
       "generous": "masculine",
-      "level": 3
+      "level": 3,
+      "$selected": true
     },
     {
       "id": 19,
       "name": "Carol",
       "generous": "masculine",
-      "level": 3
+      "level": 3,
+      "$selected": true
     },
     {
       "id": 20,
       "name": "André",
       "generous": "masculine",
-      "level": 4
+      "level": 4,
+      "$selected": true
     },
     {
       "id": 21,
       "name": "Rafael",
       "generous": "masculine",
-      "level": 4
+      "level": 4,
+      "$selected": true
     }
   ],
   "settings": [

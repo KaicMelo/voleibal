@@ -16,6 +16,7 @@ export class TablePaginationComponent {
   @Input() isCustomPaginator = false;
   @Input() actions!: Array<PoTableAction>;
   @Input() selectable = false;
+  @Output() itemSelectable = new EventEmitter();
   @Output() onChangeCurrentPage = new EventEmitter();
   @Output() onChangePageSize = new EventEmitter();
   @Output() onchangeColumnVisible = new EventEmitter();
@@ -34,6 +35,9 @@ export class TablePaginationComponent {
     });
   }
 
+  changeOptions(event: any, type: string): void {
+    this.itemSelectable.emit({event,type})
+  }
   public onPageSizeChange({ pageSize, currentPage }:any) {
     this.currentPage = currentPage;
     this.pageSize = pageSize;

@@ -18,6 +18,11 @@ export class UserService {
   }
 
   put(value: any) {
+    this.http.put(`${API}/${value.id}`,value).subscribe((users) => {
+      if (users) {
+
+      }
+    });
     return this.userSubject.next(value);
   }
 

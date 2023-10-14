@@ -10,6 +10,8 @@
   [pageSize]="pageSize"
   [totalHits]="40"
   [currentPage]="currentPage"
+  [selectable]="true"
+  (itemSelectable)="itemSelectable($event)"
   (onChangeCurrentPage)="onChangeCurrentPage($event)"
   (onChangePageSize)="onChangePageSize($event)"
 >

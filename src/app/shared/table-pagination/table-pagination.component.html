@@ -1,5 +1,7 @@
 <po-table
   [p-selectable]="selectable"
+  (p-selected)="changeOptions($event, 'add')"
+  (p-unselected)="changeOptions($event, 'remove')"
   [p-columns]="columns"
   [p-loading]="loadingTable"
   [p-items]="items"

@@ -95,6 +95,16 @@ export class PlayersComponent implements OnInit {
     await this.getTable();
   }
 
+  itemSelectable(event: any): void {
+
+    if(event.type == 'add'){
+      this.userService.put(event.event);
+    }else{
+
+    }
+    console.log(event.event)
+  }
+
   async onChangePageSize({ pageSize, currentPage }: any): Promise<void> {
     this.currentPage = currentPage;
     this.pageSize = pageSize;
